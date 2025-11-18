@@ -106,10 +106,13 @@ header nav li:hover::after{
     justify-content: center;
     align-items: center;
     opacity: 0;
+    transform: translateX(100vw);
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
 
 .ativo {
     opacity: 1;
+    transform: translateX(0);
 }
 
 .img-produto{
@@ -122,10 +125,22 @@ header nav li:hover::after{
     z-index: 2;
 }
 
-.img-produto{
+.img-produto img{
     max-width: 80%;
     max-height: 60%;
     filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3));
+    
+    /* ANIMAÇAO */
+
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
+}
+
+.ativo .img-produto img{
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .conteudo{
@@ -145,14 +160,40 @@ header nav li:hover::after{
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 10px;
+    
+    /* ANIMAÇAO */
+
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
 }
+
+.ativo .marcador-produto{
+    transform: translateX(0);
+    opacity: 1;
+}
+
 
 .nome-produto{
     font-size: 4.5rem;
     font-family: "Orbitron", sans-serif;
     line-height: 1.1;
     margin-bottom: 20px;
+    
+    /* ANIMAÇAO */
+
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
 }
+
+.ativo .nome-produto{
+    transform: translateX(0);
+    opacity: 1;
+}
+
 
 .descricao-produto{
     font-size: 1.1rem;
@@ -160,7 +201,20 @@ header nav li:hover::after{
     line-height: 1.6;
     margin-bottom: 30px;
     max-width: 600px;
+    
+    /* ANIMAÇAO */
+    
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
 }
+
+.ativo .descricao-produto{
+    transform: translateX(0);
+    opacity: 1;
+}
+
 
 .btn{
     padding: 12px 16px;
@@ -171,7 +225,20 @@ header nav li:hover::after{
     font-weight: 600;
     cursor: pointer;
     border: none;
+    
+    /* ANIMAÇAO */
+
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
 }
+
+.ativo .nome-produto{
+    transform: translateX(0);
+    opacity: 1;
+}
+
 
 
 .setas{
